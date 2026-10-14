@@ -27,7 +27,7 @@ export default function CartDrawer() {
       <div className="flex items-start justify-between gap-3 p-5 pb-3">
         <div>
           <h2 className="font-serif text-2xl">Lista de pedido</h2>
-          <p className="mt-1 text-xs text-mute">Para mostrar ao empregado. Não é uma encomenda nem uma fatura.</p>
+          <p className="mt-1 text-xs text-mute">Para mostrar ao garçom. Não é uma encomenda nem uma fatura.</p>
         </div>
         <button type="button" className="icon-btn shrink-0" aria-label="Fechar lista" onClick={close}>
           <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
@@ -54,7 +54,7 @@ export default function CartDrawer() {
         <div className="border-t border-line p-5">
           <p className="flex justify-between text-lg"><span>Total</span><span className="font-semibold text-gold">{kz(s.total)}</span></p>
           {s.pending && <p className="mt-1 text-xs text-mute">Itens «Consultar» ou com preço por confirmar não estão incluídos no total.</p>}
-          <button type="button" className="mt-4 h-12 w-full rounded-full bg-accent font-medium" onClick={() => set({ cartOpen: false, waiter: true })}>Mostrar ao empregado</button>
+          <button type="button" className="mt-4 h-12 w-full rounded-full bg-accent font-medium text-bg" onClick={() => set({ cartOpen: false, waiter: true })}>Mostrar ao garçom</button>
           <div className="mt-2 grid grid-cols-2 gap-2">
             <button type="button" className="act" onClick={() => openPreview(s, mesa)}>Ver recibo</button>
             <button type="button" className="act" onClick={() => sendWhatsApp(s, mesa)}>WhatsApp</button>

@@ -12,7 +12,7 @@ export default function ConfirmModal() {
           <p className="mt-2 text-sm text-mute">{c.text}</p>
           <div className="mt-6 grid grid-cols-2 gap-2">
             <button type="button" className="act" onClick={() => dlg.current.close()}>Cancelar</button>
-            <button type="button" className="h-11 rounded-full bg-accent text-sm font-medium" onClick={() => { c.onOk(); dlg.current.close(); }}>{c.ok}</button>
+            <button type="button" className="h-11 rounded-full bg-accent text-sm font-medium text-bg" onClick={() => { c.onOk(); dlg.current.close(); }}>{c.ok}</button>
           </div>
         </div>
       )}

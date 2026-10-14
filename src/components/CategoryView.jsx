@@ -24,10 +24,10 @@ export default function CategoryView({ id }) {
       <a href="#" className="mt-2 inline-flex h-11 items-center gap-2 text-sm text-mute hover:text-fg">← Início</a>
       <h1 className="font-serif text-4xl lg:text-6xl">{isFav ? 'Favoritos' : cat.name}</h1>
       <div className="sticky top-14 z-20 -mx-4 mt-4 bg-bg/80 px-4 py-4 backdrop-blur-xl lg:flex lg:items-center lg:justify-between lg:gap-6">
-        <div className="no-scrollbar flex gap-2 overflow-x-auto lg:min-w-0">
+        <div className="strip flex gap-2 lg:min-w-0">
           {categories.map((c) => <a key={c.id} href={`#${c.id}`} className="chip" aria-current={c.id === id}>{c.name}</a>)}
         </div>
-        <div className="no-scrollbar mt-2 flex gap-2 overflow-x-auto lg:mt-0 lg:shrink-0">
+        <div className="strip mt-2 flex gap-2 lg:mt-0 lg:shrink-0">
           {SORTS.map(([k, l]) => <button key={k} type="button" className="chip !h-9 text-xs" aria-pressed={sort === k} onClick={() => set({ sort: k })}>{l}</button>)}
         </div>
       </div>
