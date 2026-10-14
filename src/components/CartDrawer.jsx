@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { set, setQty, clearCart, mesa, useStore, useSummary } from '../store.js';
+import { set, setQty, clearCart, toast, mesa, useStore, useSummary } from '../store.js';
 import { kz, nameOf } from '../utils/format-utils.js';
-import { exportFile, sendWhatsApp } from '../utils/receipt.js';
+import { openPreview, sendWhatsApp } from '../utils/receipt.js';
 
 export default function CartDrawer() {
   const open = useStore((s) => s.cartOpen), s = useSummary(), dlg = useRef(null);
@@ -10,6 +10,17 @@ export default function CartDrawer() {
     else if (!open && dlg.current.open) dlg.current.close();
   }, [open]);
   const close = () => set({ cartOpen: false });
+
+  const minus = (l) => {
+    if (l.q > 1) return setQty(l.p.id, l.q - 1);
+    setQty(l.p.id, 0);
+    toast(`${l.p.name} removido`, { label: 'Desfazer', fn: () => setQty(l.p.id, 1) });
+  };
+  const clear = () => {
+    const snap = Object.fromEntries(s.lines.map((l) => [l.p.id, l.q]));
+    clearCart();
+    toast('Lista limpa', { label: 'Desfazer', fn: () => set({ cart: snap }) });
+  };
 
   return (
     <dialog id="cart" ref={dlg} aria-label="Lista de pedido" onClose={close} onClick={(e) => e.target === dlg.current && close()}>
@@ -30,7 +41,7 @@ export default function CartDrawer() {
               <p className="text-xs text-mute">{l.p.price != null ? kz(l.p.price) : l.p.priceText || 'Consultar'}</p>
             </div>
             <div className="flex items-center gap-1">
-              <button type="button" className="step" aria-label="Menos um" onClick={() => setQty(l.p.id, l.q - 1)}>−</button>
+              <button type="button" className="step" aria-label={l.q > 1 ? 'Menos um' : 'Remover'} onClick={() => minus(l)}>−</button>
               <span className="w-6 text-center" aria-live="polite">{l.q}</span>
               <button type="button" className="step" aria-label="Mais um" onClick={() => setQty(l.p.id, l.q + 1)}>+</button>
             </div>
@@ -44,12 +55,11 @@ export default function CartDrawer() {
           <p className="flex justify-between text-lg"><span>Total</span><span className="font-semibold text-gold">{kz(s.total)}</span></p>
           {s.pending && <p className="mt-1 text-xs text-mute">Itens «Consultar» ou com preço por confirmar não estão incluídos no total.</p>}
           <button type="button" className="mt-4 h-12 w-full rounded-full bg-accent font-medium" onClick={() => set({ cartOpen: false, waiter: true })}>Mostrar ao empregado</button>
-          <div className="mt-2 grid grid-cols-3 gap-2">
-            <button type="button" className="act" onClick={() => exportFile('pdf', s, mesa)}>PDF</button>
-            <button type="button" className="act" onClick={() => exportFile('png', s, mesa)}>Imagem</button>
+          <div className="mt-2 grid grid-cols-2 gap-2">
+            <button type="button" className="act" onClick={() => openPreview(s, mesa)}>Ver recibo</button>
             <button type="button" className="act" onClick={() => sendWhatsApp(s, mesa)}>WhatsApp</button>
           </div>
-          <button type="button" className="mt-2 h-10 w-full text-sm text-mute hover:text-fg" onClick={() => confirm('Limpar toda a lista?') && clearCart()}>Limpar lista</button>
+          <button type="button" className="mt-2 h-10 w-full text-sm text-mute hover:text-fg" onClick={clear}>Limpar lista</button>
         </div>
       )}
     </dialog>

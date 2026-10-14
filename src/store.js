@@ -12,7 +12,7 @@ categories.forEach((c) => c.products.forEach((p) =>
   products.set(p.id, { ...p, category: c.name, imageUrl: p.image ? site.imageBase + p.image : null })));
 export const mesa = new URLSearchParams(location.search).get(site.tableParam);
 
-let state = { route: hash(), sort: 'menu', favs: load('ksushi-fav', []), cart: load('ksushi-cart', {}), details: null, cartOpen: false, waiter: false, search: false };
+let state = { route: hash(), sort: 'menu', favs: load('ksushi-fav', []), cart: load('ksushi-cart', {}), details: null, cartOpen: false, waiter: false, search: false, toast: null, confirm: null, preview: null };
 const subs = new Set();
 
 export function set(patch) {
@@ -43,3 +43,18 @@ function summarize(cart) {
 }
 export const useSummary = () => { const cart = useStore((s) => s.cart); return useMemo(() => summarize(cart), [cart]); };
 export const getDetails = () => state.details;
+
+// Aviso não bloqueante (opcionalmente com acção, ex.: «Desfazer»).
+let toastTimer;
+export function toast(msg, action) {
+  clearTimeout(toastTimer);
+  set({ toast: { id: Date.now(), msg, action } });
+  toastTimer = setTimeout(() => set({ toast: null }), action ? 4000 : 1400);
+}
+// Pedido de confirmação num modal: ask({ title, text, ok, onOk }).
+export const ask = (cfg) => set({ confirm: cfg });
+export function addToCart(p, silent) {
+  setQty(p.id, (state.cart[p.id] || 0) + 1);
+  navigator.vibrate?.(12);
+  if (!silent) toast(`${p.name} adicionado`);
+}

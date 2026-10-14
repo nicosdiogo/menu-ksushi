@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { set, setQty, useStore } from '../store.js';
+import { set, addToCart, useStore } from '../store.js';
 import { PriceTag, HeartButton, ProductImage } from './ui.jsx';
 
 export default function ProductDetails() {
@@ -31,7 +31,7 @@ export default function ProductDetails() {
             {p.quantity && <p className="mt-2 text-sm text-mute">{p.quantity}</p>}
             <p className="mt-4 text-xl"><PriceTag p={p} /></p>
             <div className="mt-5 flex items-center gap-2">
-              <button type="button" className="h-11 flex-1 rounded-full bg-accent px-4 text-sm font-medium" onClick={() => setQty(p.id, n + 1)}>Adicionar à lista{n ? ` (${n})` : ''}</button>
+              <button type="button" className="h-11 flex-1 rounded-full bg-accent px-4 text-sm font-medium" onClick={() => addToCart(p, true)}>Adicionar à lista{n ? ` (${n})` : ''}</button>
               <HeartButton id={p.id} className="!bg-white/10" />
               <button type="button" className="h-11 rounded-full bg-white/10 px-4 text-sm hover:bg-white/20" onClick={() => dlg.current.close()}>Fechar</button>
             </div>

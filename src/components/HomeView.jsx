@@ -5,6 +5,7 @@ import { reveal } from './ui.jsx';
 
 export default function HomeView() {
   const [failed, setFailed] = useState({});
+  
   return (
     <div className="page-in">
       <section className="relative pb-8 pt-10 lg:pb-14 lg:pt-20">
@@ -15,6 +16,7 @@ export default function HomeView() {
         </h1>
         <p className="rise mt-3 text-mute" style={{ animationDelay: '700ms' }}>Escolha uma categoria para ver o menu.</p>
       </section>
+      
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
         {categories.map((c, i) => (
           <a key={c.id} ref={reveal} href={`#${c.id}`} style={{ '--i': i }}

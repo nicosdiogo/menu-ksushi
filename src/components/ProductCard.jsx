@@ -1,4 +1,4 @@
-import { set, setQty, useStore } from '../store.js';
+import { set, addToCart, useStore } from '../store.js';
 import { PriceTag, HeartButton, ProductImage, reveal } from './ui.jsx';
 
 export default function ProductCard({ p, i = 0 }) {
@@ -17,7 +17,7 @@ export default function ProductCard({ p, i = 0 }) {
         </div>
       </button>
       <HeartButton id={p.id} className="absolute right-2 top-2" />
-      <button type="button" className="addbtn" aria-label="Adicionar à lista de pedido" onClick={() => setQty(p.id, n + 1)}>{n || '+'}</button>
+      <button type="button" className="addbtn" aria-label="Adicionar à lista de pedido" onClick={() => addToCart(p)}>{n || '+'}</button>
     </article>
   );
 }

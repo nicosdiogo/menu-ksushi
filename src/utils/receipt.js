@@ -1,5 +1,6 @@
 import site from '../data/site.json';
 import { kz, nameOf, unit } from './format-utils.js';
+import { set, toast } from '../store.js';
 
 export function makeReceipt(s, mesa) {
   const W = 800, S = 2, y0 = 260 + s.lines.length * 52, H = y0 + 150;
@@ -56,10 +57,22 @@ function download(blob, name) {
   setTimeout(() => URL.revokeObjectURL(a.href), 4000);
 }
 
-export async function exportFile(kind, s, mesa) {
-  const c = makeReceipt(s, mesa);
-  if (kind === 'png') c.toBlob((b) => download(b, 'k-sushi-lista-pedido.png'), 'image/png');
-  else download(await pdfBlob(c), 'k-sushi-lista-pedido.pdf');
+// Abre a pré-visualização; só descarrega quando o cliente escolher.
+export async function openPreview(s, mesa) {
+  const canvas = makeReceipt(s, mesa);
+  const blob = await new Promise((r) => canvas.toBlob(r, 'image/png'));
+  set({ preview: { canvas, blob, url: URL.createObjectURL(blob) } });
+}
+
+export async function saveAs(kind, pv) {
+  if (kind === 'png') download(pv.blob, 'k-sushi-lista-pedido.png');
+  else download(await pdfBlob(pv.canvas), 'k-sushi-lista-pedido.pdf');
+  toast(kind === 'png' ? 'Imagem guardada' : 'PDF guardado');
+}
+
+export async function shareReceipt(pv) {
+  const file = new File([pv.blob], 'k-sushi-lista-pedido.png', { type: 'image/png' });
+  try { await navigator.share({ files: [file], title: 'K-Sushi — Lista de pedido' }); } catch { /* cancelado */ }
 }
 
 // Sem número configurado, o WhatsApp deixa o cliente escolher o contacto.

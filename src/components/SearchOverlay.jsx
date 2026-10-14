@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { products, set, getDetails } from '../store.js';
+import { categories, products, set, getDetails } from '../store.js';
 import { matches } from '../utils/search-utils.js';
 import ProductCard from './ProductCard.jsx';
 import { GRID } from './CategoryView.jsx';
@@ -23,6 +23,15 @@ export default function SearchOverlay() {
             <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
           </button>
         </div>
+        {!q.trim() && (
+          <div className="mt-6">
+            <p className="mb-3 text-sm text-mute">Escreva um nome ou explore por categoria.</p>
+            <div className="flex flex-wrap gap-2">
+              {categories.map((c) => <a key={c.id} href={`#${c.id}`} className="chip">{c.name}</a>)}
+              <a href="#fav" className="chip">♥ Favoritos</a>
+            </div>
+          </div>
+        )}
         <div className="mt-4" role="status">
           {q.trim() && !results.length && <p className="py-16 text-center text-mute">Sem resultados para “{q.trim()}”.</p>}
           {results.length > 0 && <>
