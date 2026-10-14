@@ -280,8 +280,9 @@ html {
   margin: 0 auto;
   width: 100%;
   max-width: 36rem;
-  height: 88dvh;
-  max-height: 88dvh;
+  height: auto;
+  max-height: 75dvh;
+  min-height: 0;
   padding: 0;
   overflow: hidden;
   border-radius: 1.75rem 1.75rem 0 0;
