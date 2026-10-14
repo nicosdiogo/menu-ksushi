@@ -1,0 +1,718 @@
+{
+ "categories": [
+  {
+   "id": "sushi-pratos-principais",
+   "name": "Sushi & Pratos Principais",
+   "products": [
+    {
+     "id": "combinado-tradicional",
+     "name": "COMBINADO TRADICIONAL",
+     "description": null,
+     "quantity": "20 ou 42 peças",
+     "price": null,
+     "priceText": null,
+     "priceStatus": "consultar",
+     "image": "menu-main/combinado-tradicional.jpg"
+    },
+    {
+     "id": "temaki-hot",
+     "name": "TEMAKI HOT",
+     "description": null,
+     "quantity": null,
+     "price": 12500,
+     "priceText": "12.500 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/temaki-hot.webp"
+    },
+    {
+     "id": "tataki-de-salmao",
+     "name": "TATAKI DE SALMÃO",
+     "description": null,
+     "quantity": null,
+     "price": 23750,
+     "priceText": "23.750 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/tataki-salmao.jpg"
+    },
+    {
+     "id": "rolos-primavera",
+     "name": "ROLOS PRIMAVERA",
+     "description": null,
+     "quantity": null,
+     "price": 14300,
+     "priceText": "14.300 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/rolos-primavera.jpg"
+    },
+    {
+     "id": "temaki-filadelfia",
+     "name": "TEMAKI FILADÉLFIA",
+     "description": null,
+     "quantity": null,
+     "price": 12250,
+     "priceText": "12.250 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/temaki-filadelfia.webp"
+    },
+    {
+     "id": "nigiri-salmao",
+     "name": "NIGIRI SALMÃO",
+     "description": null,
+     "quantity": null,
+     "price": 7100,
+     "priceText": "7.100 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/nigiri-salmao.webp"
+    },
+    {
+     "id": "hot-k-especial",
+     "name": "HOT K ESPECIAL",
+     "description": null,
+     "quantity": "8 peças",
+     "price": 13300,
+     "priceText": "13.300 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/hot-k-especial.jpg"
+    },
+    {
+     "id": "uramaki-california",
+     "name": "URAMAKI CALIFÓRNIA",
+     "description": null,
+     "quantity": "8 peças",
+     "price": 9750,
+     "priceText": "9.750 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/uramaki-california.jpg"
+    },
+    {
+     "id": "gunkan-salmao",
+     "name": "GUNKAN SALMÃO",
+     "description": null,
+     "quantity": null,
+     "price": 8150,
+     "priceText": "8.150 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/gunkan-salmao.jpg"
+    },
+    {
+     "id": "tempura-de-camarao",
+     "name": "TEMPURÁ DE CAMARÃO",
+     "description": null,
+     "quantity": null,
+     "price": 11500,
+     "priceText": "11.500 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/tempura-camarao.webp"
+    },
+    {
+     "id": "temaki-especial",
+     "name": "TEMAKI ESPECIAL",
+     "description": null,
+     "quantity": null,
+     "price": 9100,
+     "priceText": "9.100 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/temaki-especial.jpg"
+    },
+    {
+     "id": "tranche-de-atum",
+     "name": "TRANCHE DE ATUM",
+     "description": null,
+     "quantity": null,
+     "price": 11800,
+     "priceText": "11.800 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/tranche-atum.jpg"
+    },
+    {
+     "id": "nigiri-camarao",
+     "name": "NIGIRI CAMARÃO",
+     "description": null,
+     "quantity": null,
+     "price": 5450,
+     "priceText": "5.450 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/nigiri-camarao.jpg"
+    },
+    {
+     "id": "nigiri-skim",
+     "name": "NIGIRI SKIM",
+     "description": null,
+     "quantity": null,
+     "price": 2850,
+     "priceText": "2.850 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/nigiri-skim.jpg"
+    },
+    {
+     "id": "lx",
+     "name": "LX",
+     "description": null,
+     "quantity": "8 peças",
+     "price": 26900,
+     "priceText": "26.900 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/lx.jpg"
+    },
+    {
+     "id": "k-fusao",
+     "name": "K FUSÃO",
+     "description": null,
+     "quantity": "22 peças",
+     "price": 31400,
+     "priceText": "31.400 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/k-fusao.jpg"
+    },
+    {
+     "id": "especial",
+     "name": "ESPECIAL",
+     "description": null,
+     "quantity": "50 peças",
+     "price": 68800,
+     "priceText": "68.800 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/especial-50.jpg"
+    },
+    {
+     "id": "spice-tuna",
+     "name": "SPICE TUNA",
+     "description": null,
+     "quantity": "8 peças",
+     "price": 6850,
+     "priceText": "6.850 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/spice-tuna.jpg"
+    },
+    {
+     "id": "kimushi-shake",
+     "name": "KIMUSHI SHAKE",
+     "description": null,
+     "quantity": null,
+     "price": 22500,
+     "priceText": "22.500 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/kimushi-shake.jpg"
+    },
+    {
+     "id": "hirame-usuzukuri",
+     "name": "HIRAME USUZUKURI",
+     "description": null,
+     "quantity": null,
+     "price": 7600,
+     "priceText": "7.600 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/hirame.jpg"
+    },
+    {
+     "id": "combinado-matsu",
+     "name": "COMBINADO MATSU",
+     "description": null,
+     "quantity": "20 peças",
+     "price": 26900,
+     "priceText": "26.900 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/combinado-matsu.jpg"
+    },
+    {
+     "id": "temaki-california",
+     "name": "TEMAKI CALIFÓRNIA",
+     "description": null,
+     "quantity": null,
+     "price": 12450,
+     "priceText": "12.450 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/temaki-california.jpg"
+    },
+    {
+     "id": "hossomaki-maguro",
+     "name": "HOSSOMAKI MAGURO",
+     "description": null,
+     "quantity": null,
+     "price": 3200,
+     "priceText": "3.200 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/hossomaki-maguro.jpg"
+    },
+    {
+     "id": "hossomaki-shake",
+     "name": "HOSSOMAKI SHAKE",
+     "description": null,
+     "quantity": null,
+     "price": 6600,
+     "priceText": "6.600 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/hossomaki-shake.jpg"
+    },
+    {
+     "id": "nigiri-peixe-branco",
+     "name": "NIGIRI PEIXE BRANCO",
+     "description": null,
+     "quantity": null,
+     "price": 3250,
+     "priceText": "3.250 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/nigiri-peixe-branco.jpg"
+    },
+    {
+     "id": "tranche-de-garoupa",
+     "name": "TRANCHE DE GAROUPA",
+     "description": null,
+     "quantity": null,
+     "price": 12800,
+     "priceText": "12.800 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/tranche-garoupa.jpg"
+    },
+    {
+     "id": "espetada-mista-peixe-camarao",
+     "name": "ESPETADA MISTA PEIXE & CAMARÃO",
+     "description": null,
+     "quantity": null,
+     "price": 16650,
+     "priceText": "16.650 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/espetada-mista.jpg"
+    },
+    {
+     "id": "tranche-de-salmao",
+     "name": "TRANCHE DE SALMÃO",
+     "description": null,
+     "quantity": null,
+     "price": 24500,
+     "priceText": "24.500 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/tranche-salmao.jpg"
+    },
+    {
+     "id": "bife-de-frango",
+     "name": "BIFE DE FRANGO",
+     "description": null,
+     "quantity": null,
+     "price": 19900,
+     "priceText": "19.900 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/bife-frango.jpg"
+    },
+    {
+     "id": "k1-especial-do-chefe",
+     "name": "K1 ESPECIAL DO CHEFE",
+     "description": null,
+     "quantity": null,
+     "price": 38900,
+     "priceText": "38.900 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/combinado-chefe.jpg"
+    },
+    {
+     "id": "gunkan-salmao-semi-braseado",
+     "name": "GUNKAN SALMÃO SEMI BRASEADO",
+     "description": null,
+     "quantity": null,
+     "price": 8450,
+     "priceText": "8.450 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/gunkan-braseado.webp"
+    },
+    {
+     "id": "rolinhos-de-salmao-com-camarao",
+     "name": "ROLINHOS DE SALMÃO COM CAMARÃO",
+     "description": null,
+     "quantity": null,
+     "price": 15350,
+     "priceText": "15.350 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/rolinho-salmao.jpg"
+    },
+    {
+     "id": "hot-braseado",
+     "name": "HOT BRASEADO",
+     "description": null,
+     "quantity": "19 peças",
+     "price": 38600,
+     "priceText": "38.600 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/hot-braseado.jpg"
+    },
+    {
+     "id": "uramaki-k",
+     "name": "URAMAKI K",
+     "description": null,
+     "quantity": "8 peças",
+     "price": 11700,
+     "priceText": "11.700 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/uramaki-k.jpg"
+    },
+    {
+     "id": "ebiten-uramaki",
+     "name": "EBITEN URAMAKI",
+     "description": null,
+     "quantity": "8 peças",
+     "price": 12300,
+     "priceText": "12.300 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/ebiten.jpg"
+    },
+    {
+     "id": "hot-filadelfia",
+     "name": "HOT FILADÉLFIA",
+     "description": null,
+     "quantity": "10 peças",
+     "price": 13150,
+     "priceText": "13.150 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/hot-filadelfia.jpg"
+    },
+    {
+     "id": "sashimi-salmao",
+     "name": "SASHIMI SALMÃO",
+     "description": null,
+     "quantity": "15 ou 7 peças",
+     "price": null,
+     "priceText": "25.400 Kz / 12.500 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/sashimi-salmao.jpg"
+    },
+    {
+     "id": "sashimi-peixe-branco",
+     "name": "SASHIMI PEIXE BRANCO",
+     "description": null,
+     "quantity": "7 peças",
+     "price": 7350,
+     "priceText": "7.350 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/sashimi-branco.jpg"
+    },
+    {
+     "id": "guiozas-frango-e-legumes",
+     "name": "GUIOZAS FRANGO E LEGUMES",
+     "description": null,
+     "quantity": null,
+     "price": 23850,
+     "priceText": "23.850 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/guiozas.jpg"
+    },
+    {
+     "id": "hot-k-holl",
+     "name": "HOT K HOLL",
+     "description": null,
+     "quantity": "10 peças",
+     "price": 26900,
+     "priceText": "26.900 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/hot-k-holl.jpg"
+    },
+    {
+     "id": "hot-spice",
+     "name": "HOT SPICE",
+     "description": null,
+     "quantity": "8 peças",
+     "price": 15850,
+     "priceText": "15.850 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/hot-spice.jpg"
+    },
+    {
+     "id": "kimushi-misto",
+     "name": "KIMUSHI MISTO",
+     "description": null,
+     "quantity": null,
+     "price": 10900,
+     "priceText": "10.900 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/kimushi-misto.jpg"
+    },
+    {
+     "id": "k-shake",
+     "name": "K SHAKE",
+     "description": null,
+     "quantity": "8 peças",
+     "price": 14500,
+     "priceText": "14.500 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/k-shake.jpg"
+    },
+    {
+     "id": "maguro-tataki",
+     "name": "MAGURO TATAKI",
+     "description": null,
+     "quantity": null,
+     "price": 7350,
+     "priceText": "7.350 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/maguro-tataki.jpg"
+    },
+    {
+     "id": "skin",
+     "name": "SKIN",
+     "description": null,
+     "quantity": "8 peças",
+     "price": 8500,
+     "priceText": "8.500 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/skin.jpg"
+    },
+    {
+     "id": "tempura-de-legumes",
+     "name": "TEMPURA DE LEGUMES",
+     "description": null,
+     "quantity": null,
+     "price": 6950,
+     "priceText": "6.950 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/tempura-legumes.jpg"
+    },
+    {
+     "id": "yakitori-misto",
+     "name": "YAKITORI MISTO",
+     "description": null,
+     "quantity": null,
+     "price": 9450,
+     "priceText": "9.450 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/yakitori.jpg"
+    },
+    {
+     "id": "nigiri-de-atum",
+     "name": "NIGIRI DE ATUM",
+     "description": null,
+     "quantity": null,
+     "price": 2800,
+     "priceText": "2.800 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/nigiri-atum.jpg"
+    },
+    {
+     "id": "sashimi-de-atum",
+     "name": "SASHIMI DE ATUM",
+     "description": null,
+     "quantity": "7 peças",
+     "price": 4500,
+     "priceText": "4.500 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/sashimi-atum.jpg"
+    },
+    {
+     "id": "hossomaki-ebi",
+     "name": "HOSSOMAKI EBI",
+     "description": null,
+     "quantity": null,
+     "price": 4400,
+     "priceText": "4.400 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/hossomaki-ebi.webp"
+    }
+   ]
+  },
+  {
+   "id": "entradas-acompanhamentos",
+   "name": "Entradas & Acompanhamentos",
+   "products": [
+    {
+     "id": "ceviche-k-especial",
+     "name": "CEVICHE K ESPECIAL",
+     "description": null,
+     "quantity": null,
+     "price": 23450,
+     "priceText": "23.450 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/ceviche-k.jpg"
+    },
+    {
+     "id": "ceviche-de-lagosta",
+     "name": "CEVICHE DE LAGOSTA",
+     "description": null,
+     "quantity": null,
+     "price": 13250,
+     "priceText": "13.250 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/ceviche-lagosta.jpg"
+    },
+    {
+     "id": "ceviche-misto",
+     "name": "CEVICHE MISTO",
+     "description": null,
+     "quantity": null,
+     "price": 13700,
+     "priceText": "13.700 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/ceviche-misto.jpg"
+    },
+    {
+     "id": "tartar-de-salmao",
+     "name": "TARTAR DE SALMÃO",
+     "description": null,
+     "quantity": null,
+     "price": 15850,
+     "priceText": "15.850 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/tartar-salmao.jpg"
+    },
+    {
+     "id": "misso-especial",
+     "name": "MISSO ESPECIAL",
+     "description": null,
+     "quantity": null,
+     "price": 3250,
+     "priceText": "3.250 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/misso.jpg"
+    },
+    {
+     "id": "salada-de-sunomono",
+     "name": "SALADA DE SUNOMONO",
+     "description": null,
+     "quantity": null,
+     "price": 5300,
+     "priceText": "5.300 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/salada-sunomono.jpg"
+    },
+    {
+     "id": "salada-tataki",
+     "name": "SALADA TATAKI",
+     "description": null,
+     "quantity": null,
+     "price": 18700,
+     "priceText": "18.700 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/salada-tataki.jpg"
+    },
+    {
+     "id": "covert-do-chefe",
+     "name": "COVERT DO CHEFE",
+     "description": null,
+     "quantity": null,
+     "price": 1600,
+     "priceText": "1.600 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/covert.jpg"
+    }
+   ]
+  },
+  {
+   "id": "bebidas-cocktails",
+   "name": "Bebidas & Cocktails",
+   "products": [
+    {
+     "id": "sangria-frutos-vermelhos",
+     "name": "SANGRIA FRUTOS VERMELHOS",
+     "description": null,
+     "quantity": null,
+     "price": 19350,
+     "priceText": "19.350 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/sangria-frutos.jpg"
+    },
+    {
+     "id": "caipirinha-frutos-vermelhos",
+     "name": "CAIPIRINHA FRUTOS VERMELHOS",
+     "description": null,
+     "quantity": null,
+     "price": 4750,
+     "priceText": "4.750 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/caipirinha-frutos.jpg"
+    },
+    {
+     "id": "margarita",
+     "name": "MARGARITA",
+     "description": null,
+     "quantity": null,
+     "price": 4950,
+     "priceText": "4.950 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/margarita.jpg"
+    },
+    {
+     "id": "pina-colada",
+     "name": "PIÑA COLADA",
+     "description": null,
+     "quantity": null,
+     "price": 4950,
+     "priceText": "4.950 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/pina-colada.jpg"
+    },
+    {
+     "id": "sumo-de-ananas",
+     "name": "SUMO DE ANANÁS",
+     "description": null,
+     "quantity": null,
+     "price": 4850,
+     "priceText": "4.850 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/sumo-ananas.jpg"
+    },
+    {
+     "id": "sumo-de-laranja",
+     "name": "SUMO DE LARANJA",
+     "description": null,
+     "quantity": null,
+     "price": 4750,
+     "priceText": "4.750 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/sumo-laranja.jpg"
+    }
+   ]
+  },
+  {
+   "id": "sobremesas",
+   "name": "Sobremesas",
+   "products": [
+    {
+     "id": "folhado-de-maca",
+     "name": "FOLHADO DE MAÇÃ",
+     "description": null,
+     "quantity": null,
+     "price": 4800,
+     "priceText": "4.800 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/folhado-maca.jpg"
+    },
+    {
+     "id": "petit-gateau",
+     "name": "PETIT GÂTEAU",
+     "description": null,
+     "quantity": null,
+     "price": 5600,
+     "priceText": "5.600 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/petit-gateau.jpg"
+    },
+    {
+     "id": "cheesecake-frutos-vermelhos",
+     "name": "CHEESECAKE FRUTOS VERMELHOS",
+     "description": null,
+     "quantity": null,
+     "price": 4800,
+     "priceText": "4.800 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/cheesecake-frutos.jpg"
+    },
+    {
+     "id": "semi-frio-de-maracuja",
+     "name": "SEMI FRIO DE MARACUJÁ",
+     "description": null,
+     "quantity": null,
+     "price": 4700,
+     "priceText": "4.700 Kz",
+     "priceStatus": "listed",
+     "image": "menu-main/semifrio-maracuja.jpg"
+    },
+    {
+     "id": "bola-de-gelado",
+     "name": "BOLA DE GELADO",
+     "description": null,
+     "quantity": "1 unidade",
+     "price": null,
+     "priceText": null,
+     "priceStatus": "consultar",
+     "image": "menu-main/gelado.webp"
+    }
+   ]
+  }
+ ]
+}

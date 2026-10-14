@@ -1,0 +1,14 @@
+{
+  "note": "Dados do site de referência. Confirmar a correspondência telefone/unidade antes de publicar.",
+  "locations": [
+    "Via C3 Atlantic Business Center, 1.º Andar, n.º 21 — Talatona",
+    "Shopping Fortaleza — Luanda",
+    "Rua da Independência — Talatona"
+  ],
+  "contacts": [
+    { "label": "Talatona", "display": "(+244) 934 315 361", "tel": "+244934315361" },
+    { "label": "Fortaleza", "display": "(+244) 921 424 401", "tel": "+244921424401" },
+    { "label": "Talatona", "display": "(+244) 938 518 021", "tel": "+244938518021" }
+  ],
+  "email": "info@k-sushi.ao"
+}
