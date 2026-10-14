@@ -71,7 +71,7 @@ export default function App() {
               <li><a className="underline" href={`mailto:${locations.email}`}>{locations.email}</a></li>
             </ul>
           </div>
-          <p className="text-xs text-mute sm:self-end">© 2026 K-Sushi</p>
+          <p className="text-xs text-mute sm:self-end">© 2026 - <a  href="https://codex.ao" target="_blank" rel="noopener noreferrer">codex.ao</a></p>
         </div>
         <div role="note" className="mx-auto mt-4 flex max-w-7xl flex-wrap items-center justify-between gap-2 border-t border-line pt-3 text-[11px] text-mute">
           <p>Favoritos e lista ficam só neste dispositivo. Não recolhemos dados pessoais.</p>
