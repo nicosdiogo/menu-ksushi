@@ -12,6 +12,10 @@ import WaiterView from './components/WaiterView.jsx';
 import Toaster from './components/Toaster.jsx';
 import PreviewModal from './components/PreviewModal.jsx';
 import ConfirmModal from './components/ConfirmModal.jsx';
+import CheckoutView from './components/CheckoutView.jsx';
+import OrderView from './components/OrderView.jsx';
+import MyOrdersView from './components/MyOrdersView.jsx';
+import { apiEnabled } from './api.js';
 
 export default function App() {
   const route = useStore((s) => s.route), search = useStore((s) => s.search), waiter = useStore((s) => s.waiter);
@@ -48,6 +52,11 @@ export default function App() {
       <button type="button" className="icon-btn border border-line bg-surface" aria-label="Pesquisar no menu" onClick={() => set({ search: true })}>
         <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
       </button>
+      {apiEnabled && (
+  <a href="#pedidos" className="icon-btn" aria-label="Os meus pedidos">
+    <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" /><path d="M9 8h6M9 12h6" /></svg>
+  </a>
+)}
       <a href="#fav" className="icon-btn relative border border-line bg-surface" aria-label="Favoritos">
         <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z" /></svg>
         {favCount > 0 && <span className="badge">{favCount}</span>}
@@ -58,7 +67,10 @@ export default function App() {
 </header>
 
       <main className="mx-auto max-w-7xl px-4 pb-28 pt-14">
-        {isCat ? <CategoryView key={route} id={route} /> : <HomeView />}
+        {route === 'checkout' ? <CheckoutView />
+  : route === 'pedidos' ? <MyOrdersView />
+  : route.startsWith('pedido/') ? <OrderView key={route} token={route.slice(7)} />
+  : isCat ? <CategoryView key={route} id={route} /> : <HomeView />}
       </main>
 
       <footer className="border-t border-line bg-surface px-4 py-8 text-sm">
@@ -77,7 +89,7 @@ export default function App() {
           <p>Favoritos e lista ficam só neste dispositivo. Não recolhemos dados pessoais.</p>
           <button type="button" className="underline hover:text-fg" onClick={() => ask({
             title: 'Apagar dados guardados?', text: 'Os favoritos e a lista de pedido deste dispositivo serão removidos.', ok: 'Apagar',
-            onOk: () => { set({ favs: [], cart: {} }); toast('Dados apagados'); },
+            onOk: () => { set({ favs: [], cart: {} }); try { localStorage.removeItem('ksushi-orders'); } catch { /* ignorar */ } toast('Dados apagados'); },
           })}>Apagar dados guardados</button>
         </div>
       </footer>

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { set, setQty, clearCart, toast, mesa, useStore, useSummary } from '../store.js';
 import { kz, nameOf } from '../utils/format-utils.js';
 import { openPreview, sendWhatsApp } from '../utils/receipt.js';
+import { apiEnabled } from '../api.js';
 
 export default function CartDrawer() {
   const open = useStore((s) => s.cartOpen), s = useSummary(), dlg = useRef(null);
@@ -51,15 +52,21 @@ export default function CartDrawer() {
         {!s.count && <li className="py-12 text-center text-mute">A lista está vazia. Toque no + de um prato para o adicionar.</li>}
       </ul>
       {s.count > 0 && (
-        <div className="border-t border-line p-5">
+        <div className="border-t border-line p-4">
           <p className="flex justify-between text-lg"><span>Total</span><span className="font-semibold text-gold">{kz(s.total)}</span></p>
           {s.pending && <p className="mt-1 text-xs text-mute">Itens «Consultar» ou com preço por confirmar não estão incluídos no total.</p>}
-          <button type="button" className="mt-4 h-12 w-full rounded-full bg-accent font-medium text-bg" onClick={() => set({ cartOpen: false, waiter: true })}>Mostrar ao garçom</button>
-          <div className="mt-2 grid grid-cols-2 gap-2">
-            <button type="button" className="act" onClick={() => openPreview(s, mesa)}>Ver recibo</button>
-            <button type="button" className="act" onClick={() => sendWhatsApp(s, mesa)}>WhatsApp</button>
+          {apiEnabled ? (
+            <button type="button" className="mt-3 h-12 w-full rounded-full bg-accent font-medium text-bg" onClick={() => { set({ cartOpen: false }); location.hash = 'checkout'; }}>Finalizar pedido</button>
+          ) : (
+            <button type="button" className="mt-3 h-12 w-full rounded-full bg-accent font-medium text-bg" onClick={() => set({ cartOpen: false, waiter: true })}>Mostrar ao empregado</button>
+          )}
+          <div className="mt-2 grid grid-cols-3 gap-2">
+            <button type="button" className="act" onClick={() => openPreview(s, mesa)}>Recibo</button>
+            {apiEnabled
+              ? <button type="button" className="act" onClick={() => set({ cartOpen: false, waiter: true })}>Empregado</button>
+              : <button type="button" className="act" onClick={() => sendWhatsApp(s, mesa)}>WhatsApp</button>}
+            <button type="button" className="act" onClick={clear}>Limpar</button>
           </div>
-          <button type="button" className="mt-2 h-10 w-full text-sm text-mute hover:text-fg" onClick={clear}>Limpar lista</button>
         </div>
       )}
     </dialog>

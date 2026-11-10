@@ -1,6 +1,7 @@
 import { useSyncExternalStore, useMemo } from 'react';
 import menu from './data/menu.json';
 import site from './data/site.json';
+import { api, apiEnabled } from './api.js';
 
 const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
 const persist = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* sem armazenamento */ } };
@@ -10,7 +11,14 @@ export const categories = menu.categories;
 export const products = new Map();
 categories.forEach((c) => c.products.forEach((p) =>
   products.set(p.id, { ...p, category: c.name, imageUrl: p.image ? site.imageBase + p.image : null })));
-export const mesa = new URLSearchParams(location.search).get(site.tableParam);
+const mesaParam = new URLSearchParams(location.search).get(site.tableParam);
+async function resolveTable() {
+  if (!mesaParam) return null;
+  if (!apiEnabled) return { token: mesaParam, number: mesaParam };
+  try { const t = await api.table(mesaParam); return { token: mesaParam, number: t.number }; } catch { return null; }
+}
+export const table = await resolveTable();
+export const mesa = table?.number ?? null;
 
 let state = { route: hash(), sort: 'menu', favs: load('ksushi-fav', []), cart: load('ksushi-cart', {}), details: null, cartOpen: false, waiter: false, search: false, toast: null, confirm: null, preview: null };
 const subs = new Set();
